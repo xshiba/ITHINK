@@ -123,14 +123,14 @@ task.spawn(function()
     gg.__namecall = newcclosure(function(...)
         local method = getnamecallmethod()
         local args = {...}
-        if tostring(method) == "FireServer" then
+        if tostring(method) == "InvokeServer" then
             if tostring(args[1]) == "" then
                 if tostring(args[2]) ~= "true" and tostring(args[2]) ~= "false" then
                     if _G.Settings.AimbotSkills and MobP then
-                        if tostring(typeof(args[2])) == "CFrame" then
-                            args[2] = MobP
-                        elseif tostring(typeof(args[2])) == "Vector3" then
-                            args[2] = MobP.Position
+                        if tostring(typeof(args[3])) == "CFrame" then
+                            args[3] = MobP
+                        elseif tostring(typeof(args[3])) == "Vector3" then
+                            args[3] = MobP.Position
                         end
                         return old(unpack(args))
                     end
@@ -169,14 +169,14 @@ task.spawn(function()
     gg.__namecall = newcclosure(function(...)
         local method = getnamecallmethod()
         local args = {...}
-        if tostring(method) == "FireServer" then
+        if tostring(method) == "InvokeServer" then
             if tostring(args[1]) == "" then
                 if tostring(args[2]) ~= "true" and tostring(args[2]) ~= "false" then
                     if _G.Settings.AimbotSkills_Near and AimbotNearestSelectPosition then
-                        if tostring(typeof(args[2])) == "CFrame" then
-                            args[2] = AimbotNearestSelectPosition
-                        elseif tostring(typeof(args[2])) == "Vector3" then
-                            args[2] = AimbotNearestSelectPosition.Position
+                        if tostring(typeof(args[3])) == "CFrame" then
+                            args[3] = AimbotNearestSelectPosition
+                        elseif tostring(typeof(args[3])) == "Vector3" then
+                            args[3] = AimbotNearestSelectPosition.Position
                         end
                         return old(unpack(args))
                     end
