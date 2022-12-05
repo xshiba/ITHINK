@@ -123,8 +123,8 @@ task.spawn(function()
     gg.__namecall = newcclosure(function(...)
         local method = getnamecallmethod()
         local args = {...}
-        if tostring(method) == "" then
-            if tostring(args[1]) == "RemoteEvent" then
+        if tostring(method) == "FireServer" then
+            if tostring(args[1]) == "" then
                 if tostring(args[2]) ~= "true" and tostring(args[2]) ~= "false" then
                     if _G.Settings.AimbotSkills and MobP then
                         if tostring(typeof(args[2])) == "CFrame" then
@@ -169,8 +169,8 @@ task.spawn(function()
     gg.__namecall = newcclosure(function(...)
         local method = getnamecallmethod()
         local args = {...}
-        if tostring(method) == "" then
-            if tostring(args[1]) == "RemoteEvent" then
+        if tostring(method) == "FireServer" then
+            if tostring(args[1]) == "" then
                 if tostring(args[2]) ~= "true" and tostring(args[2]) ~= "false" then
                     if _G.Settings.AimbotSkills_Near and AimbotNearestSelectPosition then
                         if tostring(typeof(args[2])) == "CFrame" then
